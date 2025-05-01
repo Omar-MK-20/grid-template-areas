@@ -1,0 +1,573 @@
+@font-face {
+  font-family: Arvo;
+  src: url(fonts/Arvo/Arvo-Regular.ttf);
+}
+
+body{
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* font style and size */
+.f-s{
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.above-text{
+  font-family: sans-serif;
+  color: #9fa3a7;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.container{
+  background-color: green;
+  display: grid;
+  grid-template-areas: 
+  "iphone iphone main main"
+  "iphone iphone main main"
+  "keyboard mac mac icloud"
+  "keyboard mac mac icloud"
+  "controller ipad ipad icloud"
+  "controller ipad ipad icloud"
+  "twitter ex tv tv";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto auto auto auto 200px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+/* main section */
+.main{
+  grid-area: main;
+  background-color: rgb(247, 248, 249);
+  text-align: center;
+  flex-direction: column;
+}
+.main h4{
+  margin: 0px;
+}
+
+.main h1{
+  font-family: Arvo, sans-serif;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  margin: 20px 0px 10px;
+  max-width: 450px;
+}
+
+.main a{
+  color: #27b9c2;
+  text-decoration: underline;
+  margin: 0px;
+}
+/* main section end */
+
+
+/* iphone section */
+.iphone{
+  grid-area: iphone;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.iphone-text{
+  width: 30%;
+  align-content: center;
+  flex-direction: column;
+}
+
+.iphone-image{
+  display: flex;
+  align-items: flex-end;
+}
+
+.iphone-text-p1{
+  margin: 10px 0px 20px;
+  font-weight: 400;
+}
+
+.iphone-image img{
+  margin: 40px 0px 0px;
+  width: 250px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* iphone section end */
+
+
+
+/* keyboard section */
+.keyboard{
+  grid-area: keyboard;
+  background-color: rgb(240, 86, 56);
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.keyboard img{
+  width: 320px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.keyboard h2{
+  color: rgb(255, 251, 251);
+  margin: 10px auto 20px;
+  max-width: 70%;
+}
+
+.keyboard a{
+  color: rgb(254, 195, 22);
+}
+/* keyboard section end */
+
+/* mac section */
+.mac{
+  grid-area: mac;
+  background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.mac-image{
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 180px;
+  align-items: start;
+  margin-top: 50px;
+}
+
+.mac-image p{
+  margin-top: 10px;
+  margin: 0px 0px 30px;
+}
+
+.mac-image img{
+  width: 450px;
+  position: relative;
+  left: -160%;
+  z-index: 0;
+}
+
+.mac-text{
+  width: 40%;
+  height: 85%;
+}
+
+.mac-text a{
+  color: rgb(39, 185, 198);
+}
+/* mac section end */
+
+
+/* icloud section */
+.icloud{
+  grid-area: icloud;
+  background-color: rgb(143, 118, 188);
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.icloud-image{
+  background-color: rgb(129, 102, 176);
+  border-radius: 50%;
+  width: 373px;
+  height: 373px;
+  aspect-ratio: 1/1;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flag{
+  border-radius: 60px;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: 10px;
+  line-height: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  width: 100px;
+  margin: 0px auto;
+}
+
+.flag-text{
+  color: rgb(255, 255, 255);
+  margin: 0px;
+}
+
+
+.icloud img{
+  width: 65%;
+  max-width: 100%;
+  object-fit: contain;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.icloud-text{
+  flex-direction: column;
+}
+
+.icloud-text h2{
+  font-size: 32px;
+  line-height: 36px;
+  margin: 20px 0px 10px;
+  color: rgb(255, 255, 255);
+}
+
+.icloud-text p{
+  width: 80%;
+  max-width: 100%;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+}
+
+.icloud-text button{
+  margin-top: 20px;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background-color: rgb(255, 200, 10);
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* mac section end */
+
+/* controller section */
+.controller{
+  grid-area: controller;
+  background-color: rgb(247, 248, 249);
+  flex-direction: column;
+  z-index: 1;
+}
+
+.controller img{
+  width: 250px;
+  object-fit: contain;
+  position: relative;
+  left: -7%;
+}
+
+.controller h2{
+  color: rgb(51, 51, 51);
+  text-align: center;
+  font-weight: 400;
+  max-width: 50%;
+  margin: 10px 0px 20px;
+}
+
+.controller a{
+  color: rgb(39, 185, 195);
+  margin: 20px 0px 0px;
+}
+/* controller section end */
+
+/* ipad section */
+.ipad{
+  grid-area: ipad;
+  background-color: rgb(147, 182, 183);
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.ipad-text{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background-color: rgb(250, 104, 79);
+  padding: 0px 10px;
+  border-radius: 5px;
+  font-size: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ipad-text p{
+  color: rgb(255, 255, 255);
+  margin: 0px;
+}
+
+.ipad img{
+  width: 680px;
+  max-width: 100%;
+  object-fit: contain;
+  position: relative;
+  left: -7%;
+  position: relative;
+  left: -10%;
+}
+
+.ipad-text-p1{
+  font-weight: bold;
+  max-width: 280px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 50px auto;
+}
+
+/* ipad section end */
+
+/* twitter section */
+
+.twitter{
+  grid-area: twitter;
+  background-color: rgb(56, 213, 244);
+  flex-direction: column;
+}
+
+.twitter-circle{
+  background-color: rgb(53, 207, 237);
+  flex-direction: column;
+  text-align: center;
+  border-radius: 50%;
+  width: 240px;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.twitter-circle img{
+  width: 50px;
+}
+
+.twitter-circle h2{
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  font-weight: 400;
+  padding: 0px 30px;
+}
+
+/* twitter section end */
+
+.ex{
+  grid-area: ex;
+  background-color: rgb(247, 248, 249);
+  flex-direction: column;
+}
+
+.ex h2{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  width: 75%;
+  text-align: center;
+}
+
+.ex-text{
+  background-color: rgb(123, 196, 36);
+  position: static;
+}
+
+
+
+.tv{
+  grid-area: tv;
+  background-color: rgb(44, 44, 44);
+}
+
+.tv img{
+  width: 270px;
+  object-fit: contain;
+  position: relative;
+  left: -15%;
+}
+
+.tv h2{
+  color: rgb(255, 255, 255);
+  width: 35%;
+  font-weight: 400;
+}
+
+img{    
+  object-fit: contain;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+
+.grey-text {
+  color: #9fa3a7;
+}
+
+.arrow-link {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  margin-top: 0px;
+}
+
+@media (max-width: 991px) {
+  .container{
+    background-color: green;
+    display: grid;
+    grid-template-areas: 
+    "main main main main"
+    "iphone iphone iphone iphone"
+    "keyboard keyboard controller controller"
+    "mac mac mac mac"
+    "twitter twitter icloud icloud"
+    "ipad ipad icloud icloud"
+    "ex ex ex ex"
+    "tv tv tv tv";
+    grid-template-columns: 1fr 1fr 1fr 25%;
+    grid-template-rows: 0.7fr 1fr 1fr 1fr auto auto auto auto;
+    overflow: hidden;
+  }
+
+  .main h1{
+    max-width: 550px;
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  .icloud{
+    overflow: hidden;
+    padding: 30px 12px 70px;
+  }
+
+  .ex{
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container{
+    background-color: green;
+    display: grid;
+    grid-template-areas: 
+    "main"
+    "iphone"
+    "keyboard"
+    "controller"
+    "mac"
+    "twitter"
+    "ipad"
+    "icloud"
+    "ex"
+    "tv";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    overflow: visible;
+  }
+
+  .main{
+    padding: 50px 0px;
+  }
+
+  .main h1{
+    font-size: 48px;
+    line-height: 65px;
+    max-width: 100%;
+  }
+
+  .iphone{
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 0px;
+  }
+
+  .iphone-text{
+    width: auto ;
+    padding: 0px 20px;
+  }
+
+  .iphone-image{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .iphone-image img{
+    position: relative;
+    left: -4%;
+  }
+
+  .keyboard{
+    padding: 40px 0px;
+  }
+
+  .keyboard h2{
+    max-width: 230px;
+    margin: 10px auto 0px;
+  }
+
+  .keyboard a{
+    margin-top: 20px;
+  }
+
+  .controller{
+    padding: 30px 0px;
+  }
+
+  .mac{
+    flex-direction: column;
+    align-items: center;
+    padding: 68px 4% 50px;
+  }
+
+  .mac-image{
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 0px;
+  }
+
+  .mac-image img{
+    width: 200%;
+    left: -115%;
+  }
+
+  .mac-text{
+    width: 100%;
+  }
+
+  .ipad-text-p1{
+    max-width: 100%;
+  }
+
+  .ex h2{
+    width: auto;
+    max-width: 250px;
+  }
+
+  .tv{
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 5% 30px;
+  }
+
+  .tv h2{
+    width: 100%;
+    margin-top: 0px;
+  }
+}
